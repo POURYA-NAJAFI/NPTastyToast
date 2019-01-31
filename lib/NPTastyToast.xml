@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.npwrapper.nptastytoast.NPTastyToast</name>
+        <shortname>NPTastyToast</shortname>
+        <objectwrapper>com.sdsmdg.tastytoast.TastyToast</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>SUCCESS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>INFO</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>LENGTH_SHORT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>paramString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WARNING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>LENGTH_LONG</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>makeText</name>
+<comment>Example makeText: &lt;code&gt;
+
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.SUCCESS)
+ 
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>context</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>msg</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>length</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CONFUSING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>me</name>
+            <comment>رپ شده توسط پوریا نجفی .....> telegram: @NPlibs</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ERROR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>POURYA NAJAFI</author>
+    <dependsOn>rebound-0.3.8</dependsOn>
+</root>

@@ -1,0 +1,77 @@
+﻿Build1=Default,b4a.example
+File1=la1.bal
+FileGroup1=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library2=nptastytoast
+Library3=appcompat
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="28"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~CreateResource(values, themes.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">~\n~        <item name="colorPrimary">#2063A9</item>~\n~        <item name="colorPrimaryDark">#2063A9</item>~\n~        <item name="colorAccent">#2063A9</item>~\n~        <item name="windowNoTitle">true</item>~\n~        <item name="windowActionBar">false</item>~\n~		<item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~</resources>~\n~)~\n~'End of default text.~\n~
+NumberOfFiles=1
+NumberOfLibraries=3
+NumberOfModules=0
+Version=8
+@EndOfDesignText@
+#Region  Project Attributes 
+#ApplicationLabel: NPTastyToast
+#VersionCode: 1
+#VersionName: 
+'SupportedOrientations possible values: unspecified, landscape or .
+#SupportedOrientations: portrait
+#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+#FullScreen: False
+#IncludeTitle: True
+#End Region
+#AdditionalRes : ../res
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+Private Label1 As Label
+Private ListView1 As ListView
+Private Panel1 As Panel
+Dim np As NPTastyToast
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+Activity.LoadLayout("La1")
+ListView1.AddSingleLine("ConfusingToastView")
+ListView1.AddSingleLine("DefaultToastView")
+ListView1.AddSingleLine("ErrorToastView")
+ListView1.AddSingleLine("InfoToastView")
+ListView1.AddSingleLine("SuccessToastView")
+ListView1.AddSingleLine("WarningToastView")
+ListView1.SingleLineLayout.Label.TextColor = Colors.Black
+ListView1.SingleLineLayout.Label.Gravity = Gravity.CENTER
+ListView1.SingleLineLayout.Label.TextSize = 15
+np.Initialize("np")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+Sub ListView1_ItemClick (Position As Int, Value As Object)
+If Position = 0 Then
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.CONFUSING)	
+Else If Position =1 Then	
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.DEFAULT)
+Else If Position =2 Then
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.ERROR)
+Else If Position =3 Then
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.INFO)
+Else If Position =4 Then
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.SUCCESS)
+Else If Position =5 Then
+np.makeText(Null,"ConfusingToastView",np.LENGTH_LONG,np.WARNING)
+End If
+End Sub
